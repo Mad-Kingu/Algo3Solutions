@@ -50,11 +50,11 @@ if __name__ == '__main__':
 import os
 import re
 import math
+import random
 
 def merge_sort(array, p, r):
 	if p < r: 
 		q = int((p + r)/2) #math int flooring the value
-		print ("p: %s q:%s r:%s" % (p, q, r))
 		merge_sort(array, p, q)
 		merge_sort(array, q+1, r)
 		merge(array, p, q, r)
@@ -81,8 +81,10 @@ def merge(array, p, q, r):
 			j += 1
 
 if __name__ == '__main__':
-	array = [5, 8, 4, 7, 1, 3, 2, 6]
-	merge_sort(array, 0, 7)         #array, first element, last element
-	for i, v in enumerate(array):
+	array = []
+	array_range = 100
+	for x in range(array_range):
+		array.append(random.randint(1, 1000)) # just for random samples from random generation
+	for i, v in enumerate(array):		      # for bigger number, highest value must be changed
 		print str(i) + " " + str(v)
-#End Merge Sort
+#End of Merge Sort
