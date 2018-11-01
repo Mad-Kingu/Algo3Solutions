@@ -1,5 +1,3 @@
-#2-1. Insertion Sort 
-
 #Python 2 solutions
 #Every code between start and end tag works standalone
 
