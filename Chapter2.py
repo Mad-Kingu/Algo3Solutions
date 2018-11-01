@@ -1,9 +1,9 @@
 #2-1. Insertion Sort 
 
 #Python 2 solutions
-#Ready For Standalone use
+#Every code between start and end tag works standalone
 
-#Simple Insertion Sort
+# Start Simple Insertion Sort
 import os
 import re
 import math
@@ -25,7 +25,7 @@ if __name__ == '__main__':
 	insertion_sort([2,3,7,5])
 # End of Simple Insertion Sort
 
-#Reversed Insertion Sort
+# Start Reversed Insertion Sort
 import os
 import re
 import math
@@ -44,9 +44,9 @@ def reverse_insertion_sort(array):
     
 if __name__ == '__main__':
 	reverse_insertion_sort([2,3,7,5])
-#End of Reversed Insertion Sort
+# End of Reversed Insertion Sort
 
-#Merge Sort
+# Start Merge Sort
 import os
 import re
 import math
@@ -87,4 +87,4 @@ if __name__ == '__main__':
 		array.append(random.randint(1, 1000)) # just for random samples from random generation
 	for i, v in enumerate(array):		      # for bigger number, highest value must be changed
 		print str(i) + " " + str(v)
-#End of Merge Sort
+# End of Merge Sort
