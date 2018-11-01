@@ -1,9 +1,9 @@
-2-1. Insertion Sort 
+#2-1. Insertion Sort 
 
-Python 2 solutions
+#Python 2 solutions
 
-Simple Insertion Sort
-```python 
+#Simple Insertion Sort
+
 import os
 import re
 import math
@@ -23,10 +23,9 @@ def insertion_sort(array):
     
 if __name__ == '__main__':
 	insertion_sort([2,3,7,5])
-```
+# end
 
-Reversed Insertion Sort
-```python
+#Reversed Insertion Sort
 def reverse_insertion_sort(array):
 	for j, v in enumerate(array):
 		key = v
@@ -42,11 +41,9 @@ def reverse_insertion_sort(array):
     
 if __name__ == '__main__':
 	reverse_insertion_sort([2,3,7,5])
-```
+#end
 
-Merge Sort
-
-```python
+#Merge Sort
 def merge_sort(array, p, r):
 	if p < r: 
 		q = int((p + r)/2) #math int flooring the value
@@ -81,4 +78,4 @@ if __name__ == '__main__':
 	merge_sort(array, 0, 7)         #array, first element, last element
 	for i, v in enumerate(array):
 		print str(i) + " " + str(v)
-```
+#end
