@@ -1,4 +1,4 @@
-#Python 2 solutions
+#Python 2.7 solutions
 #Every code between start and end tag works standalone
 
 # Start Simple Insertion Sort
