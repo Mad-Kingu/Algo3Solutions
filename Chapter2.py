@@ -1,5 +1,7 @@
-#Python 2.7 solutions
+#Solutions
+#Python version 2.7
 #Every code between start and end tag works standalone
+#Some of the test cases are very simple because of my lazyness
 
 # Start Simple Insertion Sort
 import os
@@ -140,3 +142,4 @@ if __name__ == '__main__':
 	for i, v in enumerate(array):
 		print str(i) + " " + str(v)
 # End of Merge Sort Without Sentinels
+
