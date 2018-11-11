@@ -1,6 +1,7 @@
-
 #Solutions
 #Python version 2.7
+# 5 Algorithm Tested 
+
 import os
 import re
 import math
@@ -130,11 +131,10 @@ def testcase():
 	return array
 
 if __name__ == '__main__':
-	print "timetest begins"
-	
+	print "time test begins"
 	array1 = testcase()
+	
 	array = array1
-
 	t0 = time.clock()
 	insertion_sort(array)
 	t1 = time.clock()
@@ -144,7 +144,6 @@ if __name__ == '__main__':
 	print ""
 
 	array = array1
-	
 	t0 = time.clock()
 	reverse_insertion_sort(array)
 	t1 = time.clock()
@@ -154,7 +153,6 @@ if __name__ == '__main__':
 	print ""
 
 	array = array1	
-	
 	t0 = time.clock()
 	merge_sort_with_sentinel(array, 0, array.__len__() - 1)
 	t1 = time.clock()
@@ -164,7 +162,6 @@ if __name__ == '__main__':
 	print ""
 
 	array = array1
-	
 	t0 = time.clock()
 	merge_sort(array, 0, array.__len__() - 1)
 	t1 = time.clock()
@@ -174,7 +171,6 @@ if __name__ == '__main__':
 	print ""
 
 	array = array1
-	
 	t0 = time.clock()
 	recursive_insertion_sort(array, 0, array.__len__() - 1)
 	t1 = time.clock()
@@ -206,7 +202,7 @@ if __name__ == '__main__':
 
 
 # Binary Search standalone 
-
+# Exercise 2.3-5 in book
 import os
 import re
 import math
@@ -243,3 +239,5 @@ if __name__ == '__main__':
 	for i, v in enumerate(array):
 		print " " + str(v),
 	binary_search(array, 60)
+
+# End of binary search
