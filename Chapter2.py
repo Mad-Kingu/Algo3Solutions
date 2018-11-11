@@ -184,8 +184,8 @@ if __name__ == '__main__':
 	print ""
 
 #Test results for 100 integer
-#insertion sort: 		   0.000615795882332
-#reverse insertion sort:   0.000907488668699
-#merge_sort_with_sentinel: 0.00062851385192
-#merge_sort: 			   0.000876309130353
-#recursive_insertion_sort: 0.00134072014887
+#insertion sort:-----------0.000615795882332
+#reverse insertion sort:---0.000907488668699
+#merge_sort_with_sentinel:-0.00062851385192
+#merge_sort:---------------0.000876309130353
+#recursive_insertion_sort:-0.00134072014887
