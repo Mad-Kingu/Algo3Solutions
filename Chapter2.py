@@ -1,3 +1,7 @@
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true
+
 #Solutions
 #Python version 2.7
 import os
