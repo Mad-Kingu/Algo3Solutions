@@ -183,9 +183,23 @@ if __name__ == '__main__':
 		print " " + str(v),
 	print ""
 
-#Test results for 100 integer
+#Test results for 100 random integer with 1.000 max
 #insertion sort:-----------0.000615795882332
 #reverse insertion sort:---0.000907488668699
 #merge_sort_with_sentinel:-0.00062851385192
 #merge_sort:---------------0.000876309130353
 #recursive_insertion_sort:-0.00134072014887
+
+#Test results for 1.000 random integer with 1.000.000 max
+#insertion sort:-----------0.0371578045667
+#reverse insertion sort:---0.0761408428978
+#merge_sort_with_sentinel:-0.00453457154391
+#merge_sort:---------------0.00653293379763
+#recursive_insertion_sort is dead because of python reached maximum resursive number
+
+#Test results for 10.000 random integer with 1.000.000 max
+#insertion sort:-----------4.01228719965
+#reverse insertion sort:---9.18013444945
+#merge_sort_with_sentinel:-0.0712472964058
+#merge_sort:---------------0.0902499942564
+#recursive_insertion_sort is dead because of python reached maximum resursive number
