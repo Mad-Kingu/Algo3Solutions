@@ -203,3 +203,43 @@ if __name__ == '__main__':
 #merge_sort_with_sentinel:-0.0712472964058
 #merge_sort:---------------0.0902499942564
 #recursive_insertion_sort is dead because of python reached maximum resursive number
+
+
+# Binary Search standalone 
+
+import os
+import re
+import math
+import random
+import time
+
+def binary_search(array, searchingelement):
+	z = array.__len__()
+	sign = 0
+	last = z
+	mid = int(z/2)
+	min = 0
+	for i in range(int(math.log(z)/math.log(2))):
+		print "last = " + str(mid)
+		
+		if array[mid] == searchingelement:
+			print str(mid) + " th index"
+			sign = 1
+			break
+		elif array[mid] < searchingelement:
+			min = mid
+			mid = int((last + mid) / 2)
+		elif array[mid] > searchingelement:
+			last = mid
+			mid = int((mid + min) / 2)			
+	if sign == 0:
+		print "can not find the element"
+		
+
+if __name__ == '__main__':
+	array = []
+	for i in range(100):
+		array.append(i)
+	for i, v in enumerate(array):
+		print " " + str(v),
+	binary_search(array, 60)
