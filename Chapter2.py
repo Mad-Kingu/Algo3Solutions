@@ -215,9 +215,7 @@ def binary_search(array, searchingelement):
 	last = z
 	mid = int(z/2)
 	min = 0
-	for i in range(int(math.log(z)/math.log(2))):
-		print "last = " + str(mid)
-		
+	for i in range(int(math.log(z)/math.log(2)) + 1):
 		if array[mid] == searchingelement:
 			print str(mid) + " th index"
 			sign = 1
@@ -227,17 +225,24 @@ def binary_search(array, searchingelement):
 			mid = int((last + mid) / 2)
 		elif array[mid] > searchingelement:
 			last = mid
-			mid = int((mid + min) / 2)			
+			mid = int((mid + min) / 2)
 	if sign == 0:
 		print "can not find the element"
 		
-
 if __name__ == '__main__':
 	array = []
-	for i in range(100):
+	for i in range(1000000):
 		array.append(i)
-	for i, v in enumerate(array):
-		print " " + str(v),
-	binary_search(array, 60)
-
+	t0 = time.clock()
+	binary_search(array, 345676)
+	t1 = time.clock()
+	print "binary_search: " + str(t1-t0)
 # End of binary search
+
+
+
+
+
+
+
+
