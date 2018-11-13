@@ -237,10 +237,69 @@ if __name__ == '__main__':
 	binary_search(array, 345676)
 	t1 = time.clock()
 	print "binary_search: " + str(t1-t0)
-# End of binary search
+# End of 2.3-5 in book
 
+# Exercise 2.3-6 in book
+import os
+import re
+import math
+import time
+from random import randint
 
+def insertion_sort(array):
+	for j, v in enumerate(array):
+		key = v
+		i = j - 1
+		while i > -1 and array[i] > key:
+			array[i+1] = array[i]
+			i = i - 1
+		array[i+1] = key
+		
+def insertion_sort_v2(array):
+	for j, v in enumerate(array):
+		key = v
+		if j > 3:
+			a = binary_search(array, key, j)
+			array.insert(a, key)
+			array.pop(a+1)
 
+def binary_search(array, searchingelement, arraypart):
+	array = array[:arraypart]
+	last = array.__len__()
+	mid = int(last/2)
+	min = 0
+	for i in range(int(math.log(last)/math.log(2)) + 1):
+		if array[mid] == searchingelement:
+			return mid
+		elif array[mid] < searchingelement:
+			min = mid
+			mid = int((last + mid) / 2)
+		else:
+			last = mid
+			mid = int((mid + min) / 2)
+	return mid
+	
+if __name__ == '__main__':
+	array1 = []
+	for i in range(1000):
+		array1.append(randint(0, 1000))
+	
+	array = array1
+	t0 = time.clock()
+	insertion_sort(array)
+	t1 = time.clock()
+	print "insertion_sort: " + str(t1-t0)
+			
+	array = array1
+	t0 = time.clock()
+	insertion_sort_v2(array)
+	t1 = time.clock()
+	print "insertion_sort_v2: " + str(t1-t0)
+# Test results shows that worst case of improved insertion sort is O(n * lg(n)) 
+# Tested for 1000 random elements
+# insertion_sort:----0.0393522697063
+# insertion_sort_v2:-0.00700267815824
+# End of 2.3-6 in book
 
 
 
