@@ -136,50 +136,35 @@ if __name__ == '__main__':
 	print "time test begins"
 	array1 = testcase()
 	
-	array = array1
-	t0 = time.clock()
+	array = list(array1) # array = array1 creates a reference which is a fault i made before this version
+	t0 = time.clock()    # my intention is creating instance of the same list 
 	insertion_sort(array)
 	t1 = time.clock()
 	print "insertion sort: " + str(t1-t0)
-	for i, v in enumerate(array):
-		print " " + str(v),
-	print ""
 
-	array = array1
+	array = list(array1)
 	t0 = time.clock()
 	reverse_insertion_sort(array)
 	t1 = time.clock()
 	print "reverse insertion sort: " + str(t1-t0)
-	for i, v in enumerate(array):
-		print " " + str(v),
-	print ""
 
-	array = array1	
+	array = list(array1)	
 	t0 = time.clock()
 	merge_sort_with_sentinel(array, 0, array.__len__() - 1)
 	t1 = time.clock()
 	print "merge_sort_with_sentinel: " + str(t1-t0)
-	for i, v in enumerate(array):
-		print " " + str(v),
-	print ""
 
-	array = array1
+	array = list(array1)
 	t0 = time.clock()
 	merge_sort(array, 0, array.__len__() - 1)
 	t1 = time.clock()
 	print "merge_sort: " + str(t1-t0)
-	for i, v in enumerate(array):
-		print " " + str(v),
-	print ""
 
-	array = array1
+	array = list(array1)
 	t0 = time.clock()
 	recursive_insertion_sort(array, 0, array.__len__() - 1)
 	t1 = time.clock()
 	print "recursive_insertion_sort: " + str(t1-t0)
-	for i, v in enumerate(array):
-		print " " + str(v),
-	print ""
 
 #Test results for 100 random integer with 1.000 max
 #insertion sort:-----------0.000376615075598
