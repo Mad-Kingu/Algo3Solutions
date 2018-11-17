@@ -26,7 +26,8 @@ def reverse_insertion_sort(array):
 			array[i+1] = array[i]
 			i = i - 1
 		array[i+1] = key
-		
+
+# 2.3-1 Merge Sort With Sentinel
 def merge_sort_with_sentinel(array, p, r):
 	if p < r: 
 		q = int((p + r)/2) #math int flooring the value
@@ -55,6 +56,7 @@ def merge_with_sentinel(array, p, q, r):
 			array[k] = R[j]
 			j += 1
 		
+# 2.3-2 Normal Merge Sort Without Sentinel
 def merge_sort(array, p, r):
 	if p < r:
 		q = int((p + r)/2) #math int flooring the value
@@ -88,7 +90,7 @@ def merge(array, p, q, r):
 			array[k] = R[j]
 			j += 1
 
-
+# 2-3.4 Recursive Insertion Sort
 def recursive_insertion_sort(array, p, q):
 	if q > 0:
 		q = q - 1
@@ -180,24 +182,24 @@ if __name__ == '__main__':
 	print ""
 
 #Test results for 100 random integer with 1.000 max
-#insertion sort:-----------0.000615795882332
-#reverse insertion sort:---0.000907488668699
-#merge_sort_with_sentinel:-0.00062851385192
-#merge_sort:---------------0.000876309130353
-#recursive_insertion_sort:-0.00134072014887
+#insertion sort:-----------0.000376615075598
+#reverse insertion sort:---0.000407794537194
+#merge_sort_with_sentinel:-0.000437332974496
+#merge_sort:---------------0.000550973906893
+#recursive_insertion_sort:-0.00318604866786
 
 #Test results for 1.000 random integer with 1.000.000 max
-#insertion sort:-----------0.0371578045667
-#reverse insertion sort:---0.0761408428978
-#merge_sort_with_sentinel:-0.00453457154391
-#merge_sort:---------------0.00653293379763
+#insertion sort:-----------0.0470682690722
+#reverse insertion sort:---0.0364241752417
+#merge_sort_with_sentinel:-0.00485579088756
+#merge_sort:---------------0.00696122505746
 #recursive_insertion_sort is dead because of python reached maximum resursive number
 
 #Test results for 10.000 random integer with 1.000.000 max
-#insertion sort:-----------4.01228719965
-#reverse insertion sort:---9.18013444945
-#merge_sort_with_sentinel:-0.0712472964058
-#merge_sort:---------------0.0902499942564
+#insertion sort:-----------3.63857834783
+#reverse insertion sort:---3.6648724801 (9.xxxxx worst case time which is reversed)
+#merge_sort_with_sentinel:-0.054934108772
+#merge_sort:---------------0.0771092700642
 #recursive_insertion_sort is dead because of python reached maximum resursive number
 
 
