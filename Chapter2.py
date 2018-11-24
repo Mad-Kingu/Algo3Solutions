@@ -303,7 +303,84 @@ if __name__ == '__main__':
 # insertion_sort_v2:-2.25984142782
 # End of 2.3-6 in book
 
+# Solution of 2.3-7 
+# Python 2.7 standalone 
+import os
+import re
+import math
+import random
+import time
 
+		
+def merge_sort(array, p, r):
+	if p < r:
+		q = int((p + r)/2) #math int flooring the value
+		merge_sort(array, p, q)
+		merge_sort(array, q+1, r)
+		merge(array, p, q, r)
 
+def merge(array, p, q, r):
+	n1 = q - p + 1
+	n2 = r - q
+	L = [None] * (n1)
+	R = [None] * (n2)
+	for i in range(0, n1):
+		L[i] = array[p + i]
+	for j in range(0, n2):
+		R[j] = array[q + j + 1]
+	i = 0
+	j = 0
+	for k in range(p, r+1):
+		if len(L) > i and len(R) > j:
+			if L[i] <= R[j]:
+				array[k] = L[i]
+				i += 1
+			else:
+				array[k] = R[j]
+				j += 1
+		elif len(L) > i:
+			array[k] = L[i]
+			i += 1
+		elif len(R) > j:
+			array[k] = R[j]
+			j += 1
+	
+def testcase():
+	array = []
+	array_range = 1000
+	for x in range(array_range):
+		array.append(random.randint(1, 1000))
+	return array
+	
+	
+def sumoftwo(array, x):
+	dict = {}
+	result = {}
+	for i in range(array.__len__()):
+		remain = x - array[i]
+		if dict.has_key(remain):
+			result[array[i]] = remain
+			return result
+		dict[array[i]] = i
+	return result
+	 
+	
+if __name__ == '__main__':
+	print "time test begins"
+	array = testcase()
+	
+	t0 = time.clock()
+	merge_sort(array, 0, array.__len__() - 1)
+	x = array[random.randint(1, 1000)] + array[random.randint(1, 1000)] 
+	print "x: " + str(x)
+	result = sumoftwo(array, x)
+	print result
+	
+	t1 = time.clock()
+	print "recursive_insertion_sort: " + str(t1-t0)
 
-
+# End of 2.3-7
+#time test begins
+#x: 1212
+#{607: 605}
+#recursive_insertion_sort: 0.00729845854422
